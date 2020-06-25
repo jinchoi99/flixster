@@ -8,6 +8,10 @@ import android.util.Log;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 //make network request successfully
                 Log.d(TAG, "onSuccess");
+
+                //the data that we requested is in json
+                JSONObject jsonObject = json.jsonObject;
+
+                try {
+                    //we want results (this contains title, date, etc of movie), which is a jsonarray
+                    JSONArray results = jsonObject.getJSONArray("results");
+                    Log.i(TAG, "Results: " + results.toString());
+                } catch (JSONException e) {
+                    Log.e(TAG, "Hit json exception", e);
+                }
             }
 
             @Override
