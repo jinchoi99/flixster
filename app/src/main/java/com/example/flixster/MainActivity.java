@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //create a list of Movies
                     movies = Movie.fromJsonArray(results);
+                    Log.i(TAG, "Movies: " + movies.size());
                 } catch (JSONException e) {
                     Log.e(TAG, "Hit json exception", e);
                 }
