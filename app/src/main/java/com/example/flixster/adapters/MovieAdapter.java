@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
 
@@ -81,7 +82,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             else{
                 imageUrl = movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            //Rounded Corners
+            int radius = 30; // corner radius, higher value = more rounded
+            Glide.with(context).load(imageUrl).transform(new RoundedCorners(radius)).into(ivPoster);
+            //Glide.with(context).load(imageUrl).into(ivPoster);
+
         }
     }
 }
