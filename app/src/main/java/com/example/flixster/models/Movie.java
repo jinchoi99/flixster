@@ -15,6 +15,8 @@ public class Movie {
     String posterPath;
     String title;
     String overView;
+    Double voteAverage;
+
 
     // no-arg, empty constructor required for Parceler
     public Movie() {}
@@ -25,6 +27,7 @@ public class Movie {
          posterPath = jsonObject.getString("poster_path");
          title = jsonObject.getString("title");
          overView = jsonObject.getString("overview");
+         voteAverage = jsonObject.getDouble("vote_average");
     }
 
     //iterate through movieJsonArray and construct Movie object for each movie
@@ -51,5 +54,9 @@ public class Movie {
 
     public String getOverView() {
         return overView;
+    }
+
+    public Double getVoteAverage() {
+        return voteAverage;
     }
 }
