@@ -2,7 +2,7 @@
 
 **Flixster** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **11** hours spent in total
+Time spent: **14** hours spent in total
 
 ## User Stories
 
@@ -24,19 +24,23 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] List anything else that you can get done to improve the app functionality!
+  * [x] Added more information about the movie in the Movie Details Page (e.g. movie release date)
+
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+Learned about JSON, API requests using the Async Http Client library. I also got to practice using Intents by making multiple Activities.
+Understanding the concept of API was challenging at first, but after using the Movie Database API which allowed interaction between my Flixster App and the Movie Database, I learned the importance of APIs and understand how they are used now.
 
 ## Open-source libraries used
 
