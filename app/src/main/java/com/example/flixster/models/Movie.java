@@ -1,5 +1,7 @@
 package com.example.flixster.models;
 
+import android.widget.TextView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +17,7 @@ public class Movie {
     String posterPath;
     String title;
     String overView;
+    String tvReleaseDate;
     Double voteAverage;
     String popularity;
     Integer id;
@@ -22,12 +25,17 @@ public class Movie {
     // no-arg, empty constructor required for Parceler
     public Movie() {}
 
+    public String getTvReleaseDate() {
+        return tvReleaseDate;
+    }
+
     //Construct Movie by parsing through data in jsonObject
     public Movie(JSONObject jsonObject) throws JSONException {
         backdropPath = jsonObject.getString("backdrop_path");
          posterPath = jsonObject.getString("poster_path");
          title = jsonObject.getString("title");
          overView = jsonObject.getString("overview");
+        tvReleaseDate = jsonObject.getString("release_date");
          voteAverage = jsonObject.getDouble("vote_average");
         popularity = jsonObject.getString("popularity");
         id = jsonObject.getInt("id");

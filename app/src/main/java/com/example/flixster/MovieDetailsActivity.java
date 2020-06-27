@@ -37,6 +37,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     TextView tvTitle;
     TextView tvOverview;
     TextView tvPopularity;
+    TextView tvReleaseDate;
     RatingBar rbVoteAverage;
     ImageView ivImage;
 
@@ -50,6 +51,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // resolve the view objects
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvOverview = (TextView) findViewById(R.id.tvOverview);
+        tvReleaseDate = (TextView) findViewById(R.id.tvReleaseDate);
         rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
         tvPopularity = (TextView) findViewById(R.id.tvPopularity);
         ivImage = (ImageView) findViewById(R.id.ivImage);
@@ -61,6 +63,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // set the title and overview
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverView());
+        tvReleaseDate.setText("("+movie.getTvReleaseDate()+")");
         tvPopularity.setText(movie.getPopularity());
 
         // vote average is 0..10, convert to 0..5 by dividing by 2

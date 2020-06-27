@@ -26,6 +26,8 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="0dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#FFFF00"
         android:textSize="24sp"
         tools:text="Britt-Marie Was Here" />
 
@@ -39,5 +41,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="6dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="#FFFFFF"
         tools:text="Britt-Marie, a woman in her sixties, decides to leave her husband and start anew. Having been housewife for most of her life and and living in small backwater town of Borg, there isn't many jobs available and soon she finds herself fending a youth football team." />
 </RelativeLayout>
